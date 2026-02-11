@@ -32,7 +32,9 @@ I created a Service Account for Terraform. As I run Terraform on my local machin
 
 ### Access Management
 
-I followed the `Least Privilege` principle for Terraform's service account. It only has the required rights.
+I followed the `Least Privilege` principle for Terraform's service account. It only has the required rights. Here's an overview of what rights he has:
+- Network Admin : VPC management, Compute related tasks
+- Storage Admin : Bucket related management (e.g. tfstates)
 
 ## CI/CD
 
