@@ -1,9 +1,9 @@
 resource "google_compute_vpn_tunnel" "on_prem_tunnel" {
-  name          = "on-prem-tunnel-1"
-  peer_ip       = var.peer_ip
-  shared_secret = var.shared_secret
-  local_traffic_selector = [ google_compute_subnetwork.vpc_subnetwork.ip_cidr_range ]
-  remote_traffic_selector = [ var.dest_subnet_range ]
+  name                    = "on-prem-tunnel-1"
+  peer_ip                 = var.peer_ip
+  shared_secret           = var.shared_secret
+  local_traffic_selector  = [google_compute_subnetwork.vpc_subnetwork.ip_cidr_range]
+  remote_traffic_selector = [var.dest_subnet_range]
 
   target_vpn_gateway = google_compute_vpn_gateway.vpn_gateway.id
 

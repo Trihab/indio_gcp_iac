@@ -10,18 +10,18 @@ variable "project_id" {
 }
 
 variable "vpn_peer_ip" {
-  type = string
+  type        = string
   description = "Firewall IP"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "vpn_dest_subnet_range" {
-  type = string
+  type        = string
   description = "On premise subnet range for cloud vpn."
 }
 
 variable "vpn_shared_secret" {
-  type = string
+  type        = string
   description = "Tunnel shared secret."
-  sensitive = true
+  sensitive   = true
 }

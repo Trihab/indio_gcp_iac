@@ -1,3 +1,8 @@
+variable "project_id" {
+  type        = string
+  description = "Project ID"
+}
+
 variable "region-vpc" {
   type        = string
   description = "VPC Region"
@@ -5,18 +10,18 @@ variable "region-vpc" {
 }
 
 variable "peer_ip" {
-  type = string
+  type        = string
   description = "Firewall IP"
-  sensitive = true
+  sensitive   = true
 }
 
 variable "dest_subnet_range" {
-  type = string
+  type        = string
   description = "On premise subnet range for cloud vpn."
 }
 
 variable "shared_secret" {
-  type = string
+  type        = string
   description = "Tunnel shared secret."
-  sensitive = true
+  sensitive   = true
 }
