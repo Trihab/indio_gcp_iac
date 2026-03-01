@@ -16,6 +16,7 @@ Here is the list of APIs:
 
 - Compute Engine API
 - Cloud Storage API
+- Kubernetes Engine API
 
 ## Organization
 
@@ -37,14 +38,8 @@ I created a Service Account for Terraform. As I run Terraform on my local machin
 I followed the `Least Privilege` principle for Terraform's service account. It only has the required rights. Here's an overview of what rights he has:
 - Network Admin : VPC management, Compute related tasks
 - Storage Admin : Bucket related management (e.g. tfstates)
-
-## CI/CD
-
-I use Gitlab deployed on GCP for all the pipeline process. Gitlab CI has to manage builds, tests and integrations.
-
-### Registry
-
-The registry I use for my docker images is Artifact Registry from GCP.
+- Kubernetes Engine Admin : GKE related tasks
+- IAM Service Account User : Allow service account to use Compute Engine service account
 
 ## Deployments
 

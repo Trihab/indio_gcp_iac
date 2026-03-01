@@ -16,7 +16,7 @@ resource "google_compute_firewall" "vpc_fw_rule" {
   network     = google_compute_network.vpc_network.id
   description = "Creates firewall rule targeting tagged instances"
 
-  source_ranges = [ "0.0.0.0/0" ]
+  source_ranges = ["0.0.0.0/0"]
 
   allow {
     protocol = "tcp"
