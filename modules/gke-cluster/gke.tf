@@ -17,7 +17,7 @@ resource "google_container_cluster" "argocd_manager" {
 
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block   = "192.168.1.0/24"
+      cidr_block   = "194.11.255.187/32"
       display_name = "AllowedNet"
     }
   }
