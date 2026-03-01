@@ -6,4 +6,4 @@ Then Terraform will deploy the VPN services that will link my on-premise network
 
 ### Cloud VPN
 
-There is two main components to setup for Cloud VPN to work : a VPN Gateway and a VPN tunnel. Since I don't need a HA VPN, I will also need to reserve a fixed external IP address. 
+There is two main components to setup for Cloud VPN to work : a VPN Gateway and a VPN tunnel. Since I don't need a HA VPN, I only need one tunnel to be up. I will also need to reserve a fixed external IP address. 

@@ -3,7 +3,9 @@
 ## What do I deploy ?
 
 This repository contains all the GCP part of my hybrid infrastructure.
-The requirement was to build a monitoring stack involving log ingestion using pub/sub, followed by processing using Dataflow and analysis in BigQuery.
+The requirement was to build a monitoring stack involving log ingestion using pub/sub, followed by an analysis in BigQuery. That is it for the observability part.
+I also had to deploy a VPN to interconnect my VPC with my on-premise VPC. 
+For the Kubernetes part, I deployed a GKE Autopilot cluster to host ArgoCD as my kubernetes cluster manager for on-premise clusters.
 Everything is deployed using Infrastructure as Code tools like Terraform to be easily managed and replicated.
 
 ## Requirements
