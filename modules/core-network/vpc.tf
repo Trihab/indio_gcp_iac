@@ -4,10 +4,21 @@ resource "google_compute_network" "vpc_network" {
 }
 
 resource "google_compute_subnetwork" "vpc_subnetwork" {
-  name          = "subnet-1"
+  name          = "gke-autopilot-subnet"
   network       = google_compute_network.vpc_network.id
   ip_cidr_range = "10.12.0.0/22"
   region        = var.region-vpc
+
+  secondary_ip_range {
+    range_name    = "gke-pods-range"
+    ip_cidr_range = "10.10.0.0/20"
+  }
+
+  secondary_ip_range {
+    range_name    = "gke-services-range"
+    ip_cidr_range = "10.20.0.0/24"
+  }
+
 }
 
 resource "google_compute_firewall" "vpc_fw_rule" {
