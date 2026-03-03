@@ -23,6 +23,10 @@ resource "google_container_cluster" "argocd_manager" {
     services_secondary_range_name = "gke-services-range"
   }
 
+  node_config {
+    spot = true
+  }
+
   master_authorized_networks_config {
     cidr_blocks {
       cidr_block   = "194.11.255.187/32"
